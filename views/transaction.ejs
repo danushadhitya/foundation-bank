@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>Internet Banking</title> 
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="transactionstyle.css">
+    </head>
+    <body onload="gettime()">
+        <nav class="navbar navbar-inverse navbar-static-top">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <a class="navbar-brand" href="/">Foundation Bank<img id="brand" src="bank.png"></a>
+              </div>
+          
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li><a href="#">Customers <span class="sr-only">(current)</span></a></li>
+                  <li><a href="#">Transaction</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="#"><div id="time"></div></a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profile <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li role="separator" class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="t">
+          <form action="transactions" method="POST">
+            <h2 align="center">Transaction Window</h2><br>
+            <h4 id="one" class="two">From:  </h4>
+            <h4 id="one" class="oneclass">Recipient:</h4>
+            <input class="twoclass"type="text"  readonly value="<%=names%>" name="sender">
+            <select name="recipient">
+              <%data.forEach(data1=>{%>
+              <option value="<%=data1.name%>"><%=data1.name%></option>
+              <%})%> 
+            </select>
+            <span id="arrow">&#129070;</span><br>
+            <input  id="amount"type="text" placeholder="Enter the amount (INR)" name="amount"><br><br><br><br>
+            <button type="submit" class="btn btn-danger">Transfer Fund</button>
+          </form>
+        </div>
+        <div class="footer">
+          <h5>Copyright © 2021 Foundation Bank</h5>
+          <h5>Disclaimer | Privacy Policy | Code of Commitment</h5>
+        </div>
+        <script>
+            
+            function gettime(){
+                setInterval(showtime,1000);
+            }
+            function showtime(){
+                var today = new Date();
+                var h = today.getHours();
+                var m = today.getMinutes();
+                var s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('time').innerHTML=h + ":" + m + ":" + s;
+            }
+            function checkTime(i) {
+                if (i < 10) 
+                {
+                    i = "0" + i;
+                }    
+                return i;
+            }
+            
+        </script>  
+
+    </body>
+    
+</html>

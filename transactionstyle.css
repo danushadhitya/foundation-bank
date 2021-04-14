@@ -1,0 +1,103 @@
+.t{
+    background-color: cornsilk;
+    border-radius: 40px;
+    height: 500px;
+    width: 800px;
+    margin-left: 250px;
+    padding-top: 14px;
+    border-style: solid;
+    border-color: gray;
+    
+}
+
+body{
+    background-image: url("cool-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed ;
+}
+h2{
+    font-weight: bolder;
+}
+#arrow{
+    font-size: 60px;
+    margin-left: 45%;
+}
+button{
+    margin-left: 41%;
+    
+}
+h4{
+    width: 150px;
+    font-weight: bolder;
+}
+#one{
+    float: left;
+    margin-top: 40px;
+}
+.twoclass{
+    margin-left: 80px;
+}
+.two{
+    margin-left: 140px;
+}
+.oneclass{
+    padding-left: 275px;
+}
+select{
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #E0E0E0;
+    margin-left: 510px;
+    font-weight: bolder;
+    padding-left: 30px;
+}
+input{
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #E0E0E0;
+    border-width: 1px;
+    padding-left: 30px;
+    position: relative;
+    top: 40px;
+    font-weight: bolder;
+}
+#amount{
+    background-color: white;
+    width: 200px;
+    height: 40px;
+    margin-left: 36%;
+    border-radius: 10px;
+    
+}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(40,40,40);
+    color: white;
+    text-align: center;
+    padding-top: 6px;
+    padding-left: 60px;
+    
+
+ }
+ h5{
+     float: left;
+     text-align: center;
+     padding-left: 10px;
+     margin-left: 200px;
+ }
+ #brand{
+    width: 40px;
+    height: 40px;
+    float: left;
+    position: relative;
+    bottom: 8px;
+    right: 8px;
+    
+}
