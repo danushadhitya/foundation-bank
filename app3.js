@@ -12,7 +12,7 @@ const url = "mongodb+srv://danushadhitya:danush.1894@cluster0.vynni.mongodb.net/
 const client = new MongoClient(url,{useNewUrlParser: true, useUnifiedTopology: true});
 
 client.connect().then(res => {
-  app.listen(8000,function(){
+  app.listen(process.env.PORT || 8000,function(){
     console.log("Server Started");
   });
 }).catch(err => {
