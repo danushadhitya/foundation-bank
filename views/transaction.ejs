@@ -50,7 +50,7 @@
             </select>
             <span id="arrow">&#129070;</span><br>
             <input  id="amount"type="text" placeholder="Enter the amount (INR)" name="amount"><br><br><br><br>
-            <button type="submit" class="btn btn-danger">Transfer Fund</button>
+            <button onclick="pop()" type="submit" class="btn btn-danger">Transfer Fund</button>
           </form>
         </div>
         <div class="footer">
@@ -58,6 +58,9 @@
           <h5>Disclaimer | Privacy Policy | Code of Commitment</h5>
         </div>
         <script>
+            function pop(){
+                alert("Transaction Successfull!");
+            }    
             
             function gettime(){
                 setInterval(showtime,1000);
